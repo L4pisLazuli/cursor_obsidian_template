@@ -8,6 +8,9 @@ source: cursor
 status: active
 aliases: []
 related: []
+participants:
+  - user
+  - assistant
 ---
 
 # <% tp.file.title %>
@@ -15,5 +18,11 @@ related: []
 ## 概要
 
 ## 要点
+
+## ログ
+
+**user:**
+
+**assistant:**
 
 ## 関連リンク

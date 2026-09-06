@@ -8,10 +8,19 @@ source: cursor
 status: draft
 aliases: []
 related: []
+participants:
+  - user
+  - assistant
 ---
 
 # <% tp.file.title %>
 
 ## 概要
+
+## ログ
+
+**user:**
+
+**assistant:**
 
 ## メモ
