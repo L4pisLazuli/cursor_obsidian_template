@@ -13,6 +13,7 @@ alwaysApply: false
 - `tags`: `chat`, `temp` を含む
 - `source`: `cursor` | `gemini` | `chatgpt` | `manual`
 - `status`: 通常 `draft`
+- `participants`: ノートに登場する話者ラベル（`user` / `assistant` など）
 
 ## 自動生成（cursor app 運用）
 
@@ -36,12 +37,13 @@ alwaysApply: false
 
 ## 運用
 
-- 会話の要点を `## 概要` / `## メモ` に追記
+- 会話の原文は `## ログ` に **話者ラベル付きで** 追記する（記法は `chat-log-format` ルール参照）
+- 要約・補足は `## 概要` / `## メモ` に書き、`## ログ` の原文とは混ぜない
 - promote 実行手順:
   1. ファイルを `chats/persistent/` に移動
   2. `tags` の `temp` を `persistent` に変更
   3. `status` を `active` に更新
   4. トピック名にリネーム（`YYYY-MM-DD-トピック`）
-  5. 必要なら見出し構造を整理
+  5. 必要なら見出し構造を整理（`## ログ` の原文は要約せずそのまま残す）
 
 テンプレート参照: `templates/chat-temp.md`

@@ -23,6 +23,7 @@ alwaysApply: true
 ## 基本ルール
 
 - 新規 `.md` 作成時は必ず YAML frontmatter を付与する（詳細は `obsidian-frontmatter` ルール参照）
+- `chats/` に会話を残すときは **原文を `## ログ` に話者ラベル付きで記録する**。誰の発言か不明な行を残さない（記法は `chat-log-format` ルール参照）
 - ファイル名: `YYYY-MM-DD-短いトピック.md`（analysis は `YYYY-MM-DD-analysis-トピック.md`）
 - トピック語彙: **英語ケバブケース推奨**（例: `vault-design`, `api-research`）。日本語トピックも可だが、同一 vault 内で混在を最小化する
 - temp の自動生成時のみ `YYYY-MM-DD-HHmmss` を許容（promote 時にトピック名へリネーム）
@@ -32,6 +33,7 @@ alwaysApply: true
 ## ワークフロー
 
 - 新規チャット → `chats/temp/` に **無言で自動作成**（確認不要、命名は `YYYY-MM-DD-HHmmss`）
+- 会話が進んだら `## ログ` に原文を話者ラベル付きで追記する（要約は `## 概要` / `## メモ` 側）
 - 保存指示がなければ temp は **セッション終了時に削除**（使い捨て。詳細は `chat-temp` ルール）
 - 「蓄積して」「保存して」→ `chats/persistent/` へ昇格（promote）
 - 「分析して」→ `chats/persistent/` を横断検索し `analysis/` に結果を作成

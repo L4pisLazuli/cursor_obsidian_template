@@ -12,10 +12,13 @@ alwaysApply: false
 
 - `tags`: `chat`, `persistent` を含む
 - `status`: 通常 `active`（完了後は `archived`）
+- `participants`: ノートに登場する話者ラベル（`user` / `assistant` など）
 
 ## 運用
 
-- 見出し（`## 概要` / `## 要点` / `## 関連リンク`）で構造化する
+- 見出し（`## 概要` / `## 要点` / `## ログ` / `## 関連リンク`）で構造化する
+- `## ログ` には会話の原文を **話者ラベル付きで** 残す（記法は `chat-log-format` ルール参照）
+- promote 時も `## ログ` の原文は要約しない。整理するのは `## 概要` / `## 要点` 側
 - 関連ノートがあれば `related` に wikilink パスを追記（例: `chats/persistent/2026-07-01-foo.md`）
 - 他の persistent ノートを横断参照して文脈を補完してよい
 - 編集時は `updated` を当日の日付に更新

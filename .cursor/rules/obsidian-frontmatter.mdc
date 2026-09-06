@@ -19,6 +19,9 @@ source: cursor   # cursor | gemini | chatgpt | manual
 status: draft    # draft | active | archived
 aliases: []
 related: []
+participants:    # chats/ 配下のみ。登場する話者ラベル
+  - user
+  - assistant
 ---
 ```
 
@@ -29,6 +32,8 @@ related: []
 - タグ: 小文字・ハイフン区切り（例: `cursor-rules`, `api-design`）
 - フォルダ種別タグ: `temp` / `persistent` / `analysis` のいずれかを必ず含む
 - `analysis/` のノートには `sources_updated`（参照元確認日）を付与する
+- `chats/` 配下のノートには `participants` を付与する（本文の話者ラベルと一致させる。記法は `chat-log-format` ルール）
+- `participants` は `analysis/` `profile/` のノートには付与しない
 
 ## Templater テンプレートとの整合
 
